@@ -1,10 +1,6 @@
 import re
 
-with open('index.html', 'r') as f:
-    content = f.read()
-
-# 1. Update Publications Section with full content and missing item
-publications_new = """
+PUBLICATIONS_NEW = """
             <!-- PUBLICATIONS SECTION -->
             <section id="publications" class="content-section">
                 <div class="space-y-12">
@@ -52,11 +48,7 @@ publications_new = """
             </section>
 """
 
-# Replace the publications section
-content = re.sub(r'<!-- PUBLICATIONS SECTION -->.*?<section id="publications".*?</section>', publications_new, content, flags=re.DOTALL)
-
-# 2. Update Conferences Section with full titles and remove duplicate tag
-conferences_new = """
+CONFERENCES_NEW = """
             <!-- CONFERENCES SECTION -->
             <section id="conferences" class="content-section">
                 <div class="space-y-12">
@@ -95,10 +87,22 @@ conferences_new = """
             </section>
 """
 
-# Replace the conferences section (handling the potential duplicate tag)
-content = re.sub(r'<!-- CONFERENCES SECTION -->.*?<section id="conferences".*?</section>', conferences_new, content, flags=re.DOTALL)
+def update_html_content(content):
+    # 1. Update Publications Section with full content and missing item
+    content = re.sub(r'<!-- PUBLICATIONS SECTION -->.*?<section id="publications".*?</section>', PUBLICATIONS_NEW, content, flags=re.DOTALL)
 
-with open('index.html', 'w') as f:
-    f.write(content)
+    # 2. Update Conferences Section with full titles and remove duplicate tag
+    content = re.sub(r'<!-- CONFERENCES SECTION -->.*?<section id="conferences".*?</section>', CONFERENCES_NEW, content, flags=re.DOTALL)
 
-print("Content updated.")
+    return content
+
+if __name__ == "__main__":
+    with open('index.html', 'r') as f:
+        content = f.read()
+
+    new_content = update_html_content(content)
+
+    with open('index.html', 'w') as f:
+        f.write(new_content)
+
+    print("Content updated.")
