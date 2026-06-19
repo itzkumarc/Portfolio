@@ -14,8 +14,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add scroll effect to navigation
 let lastScroll = 0;
+const nav = document.querySelector('nav');
+
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
+    if (!nav) return;
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
