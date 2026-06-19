@@ -1,13 +1,11 @@
 import re
 
-with open('index.html', 'r') as f:
-    content = f.read()
-
-# 1. Fix Mobile Navigation (Add Pubs and Conferences)
-mobile_nav_start = content.find('<!-- Mobile Bottom Navigation -->')
-mobile_nav_end = content.find('<!-- Main Content -->')
-if mobile_nav_start != -1 and mobile_nav_end != -1:
-    mobile_nav_html = """
+def apply_fixes(content):
+    # 1. Fix Mobile Navigation (Add Pubs and Conferences)
+    mobile_nav_start = content.find('<!-- Mobile Bottom Navigation -->')
+    mobile_nav_end = content.find('<!-- Main Content -->')
+    if mobile_nav_start != -1 and mobile_nav_end != -1:
+        mobile_nav_html = """
     <!-- Mobile Bottom Navigation -->
     <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-teal-100 z-50 flex justify-around py-3 dark:bg-black/90 dark:border-teal-900">
         <a href="#about" class="flex flex-col items-center gap-1 text-outline nav-link active" data-target="about">
@@ -36,19 +34,21 @@ if mobile_nav_start != -1 and mobile_nav_end != -1:
         </a>
     </nav>
     """
-    content = content[:mobile_nav_start] + mobile_nav_html + content[mobile_nav_end:]
+        content = content[:mobile_nav_start] + mobile_nav_html + content[mobile_nav_end:]
 
-# 2. Fix Duplicate Section Tag (Remove extra conferences section)
-# I'll look for the specific block I saw earlier:
-# <section id="conferences" class="content-section">
-# <section id="conferences" class="content-section">
-content = re.sub(r'<section id="conferences" class="content-section">\s*<section id="conferences" class="content-section">',
-                 '<section id="conferences" class="content-section">', content)
+    # 2. Fix Duplicate Section Tag (Remove extra conferences section)
+    content = re.sub(r'<section id="conferences" class="content-section">\s*<section id="conferences" class="content-section">',
+                     '<section id="conferences" class="content-section">', content)
 
-# 3. Ensure Publications and Conferences titles are full and descriptive
-# Already seem okay in the current version based on my previous cat, but let's double check.
+    return content
 
-with open('index.html', 'w') as f:
-    f.write(content)
+if __name__ == "__main__":
+    with open('index.html', 'r') as f:
+        content = f.read()
 
-print("Portfolio fixed.")
+    new_content = apply_fixes(content)
+
+    with open('index.html', 'w') as f:
+        f.write(new_content)
+
+    print("Portfolio fixed.")
