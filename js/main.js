@@ -13,7 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
-let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     const currentScroll = window.pageYOffset;
@@ -23,6 +22,4 @@ window.addEventListener('scroll', () => {
     } else {
         nav.style.boxShadow = 'none';
     }
-    
-    lastScroll = currentScroll;
 });
