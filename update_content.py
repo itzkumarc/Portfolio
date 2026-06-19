@@ -21,7 +21,7 @@ publications_new = """
                             <h4 class="text-2xl font-bold text-primary mt-2 dark:text-teal-100 leading-tight">Statistical evaluation of growth models for area, production, and productivity of tapioca</h4>
                             <p class="mt-4 text-sm text-outline dark:text-teal-100/70 italic">"Evaluation of nonlinear growth models for estimating biomass yield in tapioca cultivation systems under varying climatic conditions."</p>
                             <div class="flex gap-4 mt-6">
-                                <a href="https://www.researchgate.net/publication/351123951" target="_blank" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
+                                <a href="https://www.researchgate.net/publication/351123951" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
                                 <span class="px-4 py-2 border border-teal-100 text-[10px] font-bold text-teal-800 rounded-full dark:border-teal-800 dark:text-teal-300 uppercase tracking-widest">Growth Modeling</span>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ publications_new = """
                             <h4 class="text-2xl font-bold text-primary mt-2 dark:text-teal-100 leading-tight">Does abiotic stress influence the white fecal disease incidence and its intensity in Penaeus vannamei shrimp farms?</h4>
                             <p class="mt-4 text-sm text-outline dark:text-teal-100/70 italic">"Investigating the correlation between environmental abiotic factors and the prevalence of white fecal disease in P. vannamei through multivariate analysis."</p>
                             <div class="flex gap-4 mt-6">
-                                <a href="https://www.researchgate.net/publication/389713821" target="_blank" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
+                                <a href="https://www.researchgate.net/publication/389713821" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
                                 <span class="px-4 py-2 border border-teal-100 text-[10px] font-bold text-teal-800 rounded-full dark:border-teal-800 dark:text-teal-300 uppercase tracking-widest">Biostatistics</span>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ publications_new = """
                             <h4 class="text-2xl font-bold text-primary mt-2 dark:text-teal-100 leading-tight">Spatial and temporal variations of tapioca</h4>
                             <p class="mt-4 text-sm text-outline dark:text-teal-100/70 italic">"Analysis of spatial and temporal trends in tapioca production using GIS and statistical modeling."</p>
                             <div class="flex gap-4 mt-6">
-                                <a href="https://www.researchgate.net/publication/372720320" target="_blank" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
+                                <a href="https://www.researchgate.net/publication/372720320" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white text-[10px] font-bold rounded-full dark:bg-teal-800 hover:bg-teal-700 transition-colors">READ PAPER</a>
                                 <span class="px-4 py-2 border border-teal-100 text-[10px] font-bold text-teal-800 rounded-full dark:border-teal-800 dark:text-teal-300 uppercase tracking-widest">GIS Analysis</span>
                             </div>
                         </div>
