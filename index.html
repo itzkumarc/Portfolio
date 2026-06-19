@@ -638,22 +638,24 @@
             const initialHash = window.location.hash.substring(1);
             showSection(initialHash || 'about');
 
-            // Theme Toggle Logic
+                        // Theme Toggle Logic
             const themeToggles = document.querySelectorAll('.theme-toggle');
             const html = document.documentElement;
+            const darkIcons = document.querySelectorAll('.dark-icon');
+            const lightIcons = document.querySelectorAll('.light-icon');
 
             function setTheme(isDark) {
                 if (isDark) {
                     html.classList.add('dark');
                     html.classList.remove('light');
-                    document.querySelectorAll('.dark-icon').forEach(i => i.classList.add('hidden'));
-                    document.querySelectorAll('.light-icon').forEach(i => i.classList.remove('hidden'));
+                    darkIcons.forEach(i => i.classList.add('hidden'));
+                    lightIcons.forEach(i => i.classList.remove('hidden'));
                     localStorage.setItem('theme', 'dark');
                 } else {
                     html.classList.remove('dark');
                     html.classList.add('light');
-                    document.querySelectorAll('.dark-icon').forEach(i => i.classList.remove('hidden'));
-                    document.querySelectorAll('.light-icon').forEach(i => i.classList.add('hidden'));
+                    darkIcons.forEach(i => i.classList.remove('hidden'));
+                    lightIcons.forEach(i => i.classList.add('hidden'));
                     localStorage.setItem('theme', 'light');
                 }
             }
