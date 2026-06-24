@@ -4,7 +4,7 @@ import os
 
 async def verify_sections():
     async with async_playwright() as p:
-        browser = await p.chromium.launch()
+        browser = await p.chromium.launch(chromium_sandbox=True)
         context = await browser.new_context(viewport={'width': 1280, 'height': 800})
         page = await context.new_page()
 
