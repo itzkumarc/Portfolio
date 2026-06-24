@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Biodata",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzkumarc/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/itzkumarc/Portfolio/issues"
+  },
+  "homepage": "https://github.com/itzkumarc/Portfolio#readme",
+  "devDependencies": {
+    "@vitest/browser": "^4.1.9",
+    "jsdom": "^29.1.1",
+    "vitest": "^4.1.9"
+  }
+}
