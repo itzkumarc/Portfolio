@@ -13,15 +13,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
+const nav = document.querySelector('nav');
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll > 100) {
-        nav.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
-    } else {
-        nav.style.boxShadow = 'none';
+    if (nav) {
+        if (currentScroll > 100) {
+            nav.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
+        } else {
+            nav.style.boxShadow = 'none';
+        }
     }
     
     lastScroll = currentScroll;
