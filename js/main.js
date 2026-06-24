@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.scrollY;
     
     if (currentScroll > 100) {
         nav.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
